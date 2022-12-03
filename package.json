@@ -1,0 +1,23 @@
+{
+  "name": "aoc2022",
+  "version": "1.0.0",
+  "description": "Advent of Code 2022",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc-watch --noClear -p ./tsconfig.json --onSuccess \"node ./dist/index.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyppan/AoC2022.git"
+  },
+  "author": "cyppan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cyppan/AoC2022/issues"
+  },
+  "homepage": "https://github.com/cyppan/AoC2022#readme",
+  "devDependencies": {
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.9.3"
+  }
+}
