@@ -2,6 +2,6 @@
   "compilerOptions": {
     "noImplicitAny": true,
     "strictNullChecks": true,
-    "outDir": "dist"
+    "outDir": "dist",
   },
 }
