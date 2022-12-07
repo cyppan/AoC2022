@@ -6,8 +6,8 @@ function getInput(name: string) {
     return fs.readFileSync(path.join(__dirname, '..', 'inputs', name)).toString('utf-8')
 }
 
-// const input = getInput("day7.txt")
-const input = example
+const input = getInput("day7.txt")
+// const input = example
 
 console.log(
     "part 1\n",

@@ -132,5 +132,11 @@ export function part2(input: string) {
     const [_, ...commands] = parseCommands(input)
     const rootNode = parseFileTree(commands)
     computeFolderSizes(rootNode)
-    printTree(rootNode)
+    const expectedFreeSpace = 30000000
+    const freeSpace = 70000000 - rootNode.totalSize!
+    const minSizeToDelete = expectedFreeSpace - freeSpace
+    const minFolder = findFolders(rootNode, n => n.totalSize! >= minSizeToDelete).reduce((minN, n) =>
+        n.totalSize! < minN.totalSize! ? n : minN
+        , rootNode)
+    return minFolder.totalSize
 }
