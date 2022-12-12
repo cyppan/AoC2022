@@ -13,6 +13,12 @@ export function multilineStringAsMatrix(s: string): string[][] {
     return s.split('\n').map(line => line.split(''))
 }
 
+export function printMatrix<T>(m: T[][], separator = '') {
+    m.forEach(line => {
+        console.log(line.join(separator))
+    })
+}
+
 export function mapMatrix<T, U>(m: T[][], mapper: (t: T) => U) {
     const res = []
     for (let rowI = 0; rowI < m.length; rowI++) {
@@ -32,4 +38,14 @@ export function rotateMatrix<T>(arr: T[][]) {
         }
     }
     return res
+}
+
+export function findMatrixCoords<T extends string | number>(m: T[][], pred: (t: T) => boolean) {
+    const coords: [number, number][] = []
+    for (let r = 0; r < m.length; r++) {
+        for (let c = 0; c < m[0].length; c++) {
+            if (pred(m[r][c])) coords.push([r, c])
+        }
+    }
+    return coords
 }
