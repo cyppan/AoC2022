@@ -1,12 +1,12 @@
 import * as fs from 'fs'
 import * as path from 'path'
-import { example, part1, part2 } from './day15'
+import { example, part1, part2 } from './day16'
 
 function getInput(name: string) {
     return fs.readFileSync(path.join(__dirname, '..', 'inputs', name)).toString('utf-8')
 }
 
-const input = getInput("day15.txt")
+const input = getInput("day16.txt")
 // const input = example
 
 console.log(
