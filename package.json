@@ -4,6 +4,7 @@
   "description": "Advent of Code 2022",
   "main": "index.js",
   "scripts": {
+    "compile": "tsc --downlevelIteration",
     "dev": "tsc-watch --downlevelIteration --noClear -p ./tsconfig.json --onSuccess \"node ./dist/index.js\""
   },
   "repository": {
